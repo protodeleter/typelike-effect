@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+<div class="string">There Goes Some Text</div>
+<script type="text/javascript">
+(function($) {
+/* TYPE LIKE JS */
+var str = $('.string');
+var h3Arr = [];
+console.log(str.text());
+for (var i = 0; i < str.text().length; i++) {
+    h3Arr.push( str.text().charAt(i) );
+}
+str.html('');
+for (let i=0; i<h3Arr.length; i++) {
+
+    setTimeout( function timer(){
+      str.append( h3Arr[i] );
+    }, i*50 );
+
+}
+/* TYPE LIKE JS */
+})(jQuery);
+</script>
+
+
+  </body>
+</html>
